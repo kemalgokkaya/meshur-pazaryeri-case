@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Meşhur Pazaryeri - Frontend Case Study
 
-## Getting Started
+Bu proje, **Next.js 15+** kullanılarak geliştirilmiş, ölçeklenebilir ve yüksek performanslı bir pazaryeri uygulaması prototipidir. Modern frontend mimarileri ve en iyi uygulama (best practice) prensipleri üzerine inşa edilmiştir.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Öne Çıkan Özellikler
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Rendering Mimarisi:** SEO ve performans öncelikli **Server Side Rendering (SSR)** ve **Server Components** kullanımı.
+- **Modern Tech Stack:** Next.js 15 (App Router), TypeScript (Strict Mode), Tailwind CSS v4.
+- **State Management:** Veri akışını yönetmek için **Zustand** ile normalize edilmiş state yapısı.
+- **Atomic Design:** UI bileşenleri `atoms` ve `molecules` olarak katmanlandırılmıştır.
+- **Karanlık Mod (Dark Mode):** `next-themes` entegrasyonu ile sistem uyumlu veya manuel tema seçimi.
+- **Performans:** `next/image` ile optimize edilmiş görseller ve bileşen bazlı memoization.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Mimari ve Kararlar
 
-## Learn More
+### 📁 Klasör Yapısı
+Proje, **Atomic Design** prensiplerine göre organize edilmiştir:
+- `src/components/atoms`: En küçük yapı taşları (Button, ThemeToggle).
+- `src/components/molecules`: Birden fazla atomun birleşimi (ProductCard).
+- `src/services`: API veri dönüşümleri ve mapping işlemleri.
+- `src/store`: Global state (Zustand).
 
-To learn more about Next.js, take a look at the following resources:
+### ⚙️ Tercih Sebepleri
+- **Next.js 15:** En güncel özellikler ve Turbo motoru sayesinde hız avantajı.
+- **Tailwind v4:** Daha küçük CSS çıktısı ve CSS-native yapılandırma.
+- **Zustand:** Redux'a göre daha hafif, boiler-plate kod gerektirmeyen ölçeklenebilir yapı.
+- **Data Mapping:** API'den gelen verilerin UI katmanına geçmeden önce `mapper` fonksiyonlarından geçirilerek tip güvenliğinin (Type Safety) sağlanması.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Kurulum ve Çalıştırma
 
-## Deploy on Vercel
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Bağımlılıkları Yükleyin:**
+   ```bash
+   npm install
